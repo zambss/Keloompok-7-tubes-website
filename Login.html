@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - Sweet Bakery</title>
+        <link rel="stylesheet" href="Login.css"> <link rel="preconnect"
+            href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Parisienne&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+        /* CSS khusus untuk halaman login akan ada di sini atau di login.css */
+        /* Saya akan letakkan CSSnya di bawah untuk kemudahan */
+    </style>
+    </head>
+    <body class="login-page-body">
+
+        <div class="login-backdrop"></div>
+
+        <main class="login-main-container">
+            <div class="login-form-wrapper">
+                <header class="login-header">
+                    <div class="bakery-brand-title"
+                        aria-label="Sweet Bakery">Sweet Bakery</div>
+                    <p class="login-welcome-message">Welcome back, please login
+                        to continue.</p>
+                </header>
+
+                <form id="bakeryLoginForm">
+                    <section class="account-selection-section">
+                        <h3 class="account-selection-title">Select Your
+                            Account:</h3>
+                        <div class="user-profiles-container">
+
+                            <div class="user-profile"
+                                data-username="Manager Dian" tabindex="0"
+                                role="button" aria-pressed="false">
+                                <div class="profile-avatar-icon"><i
+                                        class="fas fa-user-tie"></i></div>
+                                <span class="profile-name-text">Manager
+                                    Dian</span>
+                            </div>
+
+                            <div class="user-profile active"
+                                data-username="Cashier Budi" tabindex="0"
+                                role="button" aria-pressed="true">
+                                <div class="profile-avatar-icon"><i
+                                        class="fas fa-cash-register"></i></div>
+                                <span class="profile-name-text">Cashier
+                                    Budi</span>
+                            </div>
+
+                            <div class="user-profile" data-username="Chef Rina"
+                                tabindex="0" role="button" aria-pressed="false">
+                                <div class="profile-avatar-icon"><i
+                                        class="fas fa-hat-chef"></i></div>
+                                <span class="profile-name-text">Chef Rina</span>
+                            </div>
+
+                        </div>
+                        <input type="hidden" id="selectedUsername"
+                            name="username" value="Cashier Budi">
+                    </section>
+
+                    <section class="password-input-section">
+                        <label for="loginPassword"
+                            class="password-label">Password for <strong
+                                id="displayNameForPassword">Cashier
+                                Budi</strong>:</label>
+                        <div class="input-field-group">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="loginPassword"
+                                name="password"
+                                placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password"
+                                aria-label="Show password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <button type="submit" class="submit-login-btn">
+                        <i class="fas fa-sign-in-alt"></i> Login Now
+                    </button>
+
+                    <footer class="login-form-footer">
+                        <a href="#" class="form-link">Can't login? Get help</a>
+                    </footer>
+                </form>
+            </div>
+        </main>
+
+        <script>
+    // Simple JavaScript to handle profile selection and password visibility toggle
+    document.addEventListener('DOMContentLoaded', () => {
+        const profiles = document.querySelectorAll('.user-profile');
+        const selectedUsernameInput = document.getElementById('selectedUsername');
+        const displayNameForPassword = document.getElementById('displayNameForPassword');
+
+        profiles.forEach(profile => {
+            profile.addEventListener('click', function() {
+                // Remove active class from all profiles
+                profiles.forEach(p => {
+                    p.classList.remove('active');
+                    p.setAttribute('aria-pressed', 'false');
+                });
+                // Add active class to the clicked profile
+                this.classList.add('active');
+                this.setAttribute('aria-pressed', 'true');
+                const username = this.dataset.username;
+                selectedUsernameInput.value = username;
+                displayNameForPassword.textContent = username;
+            });
+
+            // Allow selection with Enter key for accessibility
+            profile.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        const togglePasswordBtns = document.querySelectorAll('.toggle-password');
+        togglePasswordBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const passwordInput = this.previousElementSibling; // input#loginPassword
+                const icon = this.querySelector('i');
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                    this.setAttribute('aria-label', 'Hide password');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                    this.setAttribute('aria-label', 'Show password');
+                }
+            });
+        });
+    });
+</script>
+    </body>
+</html>

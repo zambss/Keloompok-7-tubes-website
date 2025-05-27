@@ -4,60 +4,79 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sweet Bakery</title>
-        <link rel="stylesheet" href="Dashboard.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="stylesheet" href="Dashboard.css" /> <link rel="preconnect"
+            href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
     </head>
     <body>
         <header>
             <div class="logo">Sweet Bakery</div>
             <div class="search">
-                <input type="text" placeholder="Search" />
+                <input type="text" placeholder="Search products..." />
             </div>
             <nav>
-                <a href="tampilanDashboard.html">Home</a>
-                <a href="tampilanAboutUs.html">About</a>
-                <a href="tampilanEtalase.html">Cookies</a>
-                <a href="tampilanContactUs.html">Contact Us</a>
-                <a href="tampilanCart.html" class="cart-icon">🛒</a>
+                <a href="tampilanDashboard.html"
+                    class="nav-link active">Home</a>
+                <a href="tampilanAboutUs.html" class="nav-link">About</a>
+                <a href="tampilanEtalase.html" class="nav-link">Cookies</a>
+                <a href="tampilanContactUs.html" class="nav-link">Contact Us</a>
+                <a href="cart.html" class="cart-icon">🛒 <span
+                        class="cart-count">0</span></a>
             </nav>
         </header>
 
-        <main>
-            <div class="left">
-                <h1>PLVRAR</h1>
-                <h2>Bakery Everyday</h2>
-                <p>Tempat di mana kelezatan dan kualitas bertemu dalam setiap
+        <main class="main-content">
+            <div class="left-column">
+                <h1>PLVRAR</h1> <h2>Bakery Everyday</h2>
+                <p>
+                    Tempat di mana kelezatan dan kualitas bertemu dalam setiap
                     gigitan.
                     Kami hadir untuk membawa suasana hangat dari aroma roti yang
-                    baru dipanggang ke dalam hari-harimu.
-                    Dengan bahan-bahan pilihan terbaik dan sentuhan tangan ahli,
-                    setiap produk kami dibuat dengan cinta dan komitmen untuk
-                    memberikan pengalaman kuliner yang tak terlupakan.
+                    baru
+                    dipanggang ke dalam hari-harimu. Dengan bahan-bahan pilihan
+                    terbaik
+                    dan sentuhan tangan ahli, setiap produk kami dibuat dengan
+                    cinta dan
+                    komitmen untuk memberikan pengalaman kuliner yang tak
+                    terlupakan.
                     Mulai dari roti klasik, pastry renyah, hingga kue-kue manis
-                    yang menggoda selera — semua kami sajikan segar setiap
-                    hari..</p>
-                <a href="tampilanEtalase.html" button class="order-btn">ORDER NOW →</a>
+                    yang
+                    menggoda selera — semua kami sajikan segar setiap hari.
+                </p>
+                <a href="tampilanEtalase.html" class="order-btn">ORDER NOW →</a>
 
-                    <div class="features">
-                        <br>
-                        <div><strong>50+</strong><br>Organic Product</div>
-                        <div><strong>100+</strong><br>International
-                            Franchises</div>
-                        <div><strong>1Million+</strong><br>Sales throughout the
-                            world</div>
+                <div class="features">
+                    <div class="feature-item">
+                        <strong>50+</strong>
+                        <span>Organic Product</span>
+                    </div>
+                    <div class="feature-item">
+                        <strong>100+</strong>
+                        <span>International Franchises</span>
+                    </div>
+                    <div class="feature-item">
+                        <strong>1Million+</strong>
+                        <span>Sales throughout the world</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="right">
+            <div class="right-column">
+                <div class="image-container">
                     <img
-                        src="https://p7.hiclipart.com/preview/23/42/359/rye-bread-bakery-pumpkin-bread-white-bread-bread-element.jpg"
-                        alt="Bread Basket" />
+                        src="https_p7_hiclipart_com_preview_23_42_359_rye-bread-bakery-pumpkin-bread-white-bread-bread-element_jpg"
+                        alt="Freshly Baked Bread Basket"
+                        class="hero-image" />
                     <div class="discount-badge">
-                        <span>50%</span><br>Discount for<br>First Order
+                        <span>50%</span>
+                        Discount for First Order
                     </div>
                 </div>
-            </main>
-        </body>
-    </html>
+            </div>
+        </main>
+
+    </body>
+</html>

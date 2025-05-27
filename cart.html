@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shopping Cart - Sweet Bakery</title>
+        <link rel="stylesheet" href="cart.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">Sweet Bakery</div>
+            <div class="search">
+                <input type="text" placeholder="Search products..." />
+            </div>
+            <nav>
+                <a href="tampilanDashboard.html"
+                    class="nav-link active">Home</a>
+                <a href="tampilanAboutUs.html" class="nav-link">About</a>
+                <a href="tampilanEtalase.html" class="nav-link">Cookies</a>
+                <a href="tampilanContactUs.html" class="nav-link">Contact Us</a>
+                <a href="cart.html" class="cart-icon">🛒 <span
+                        class="cart-count">0</span></a>
+            </nav>
+        </header>
+
+        <main class="cart-page-container">
+            <div class="page-title-container">
+                <h1>Your Sweet Cart 🍪</h1>
+            </div>
+
+            <div class="cart-wrapper">
+                <div class="cart-items-section">
+                    <div class="cart-table-header">
+                        <div class="header-select-all">
+                            <input type="checkbox" id="selectAllTop" />
+                        </div>
+                        <div class="header-product">Product</div>
+                        <div class="header-price">Unit Price</div>
+                        <div class="header-quantity">Quantity</div>
+                        <div class="header-total">Total Price</div>
+                        <div class="header-action">Action</div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-select">
+                            <input type="checkbox" class="item-checkbox"
+                                checked />
+                        </div>
+                        <div class="item-product">
+                            <img
+                                src="https_p7_hiclipart_com_preview_749_668_877_chocolate-chip-cookie-baking-cookies-biscuits-png-image_jpg"
+                                alt="Choco Chip Cookies"
+                                class="cart-product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Choco Chip
+                                    Paradise</h3>
+                                <p class="product-variant">Variant: Classic
+                                    Large (pcs)</p>
+                            </div>
+                        </div>
+                        <div class="item-price">
+                            <span class="original-price">Rp12.000</span>
+                            <span class="current-price">Rp10.000</span>
+                        </div>
+                        <div class="item-quantity">
+                            <button class="quantity-adjust-btn"
+                                aria-label="Kurangi jumlah">-</button>
+                            <input type="number" class="quantity-input"
+                                value="2" min="1" aria-label="Jumlah" />
+                            <button class="quantity-adjust-btn"
+                                aria-label="Tambah jumlah">+</button>
+                        </div>
+                        <div class="item-total-price">Rp20.000</div>
+                        <div class="item-action">
+                            <button class="remove-item-btn"
+                                aria-label="Hapus item"><i
+                                    class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-select">
+                            <input type="checkbox" class="item-checkbox"
+                                checked />
+                        </div>
+                        <div class="item-product">
+                            <img
+                                src="https_p7_hiclipart_com_preview_670_60_885_red-velvet-cake-birthday-cake-chocolate-cake-cream-cheese-red-velvet-cupcakes_jpg"
+                                alt="Red Velvet Cupcake"
+                                class="cart-product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Red Velvet Delight</h3>
+                                <p class="product-variant">Variant: Box of 4</p>
+                            </div>
+                        </div>
+                        <div class="item-price">
+                            <span class="current-price">Rp60.000</span>
+                        </div>
+                        <div class="item-quantity">
+                            <button class="quantity-adjust-btn"
+                                aria-label="Kurangi jumlah">-</button>
+                            <input type="number" class="quantity-input"
+                                value="1" min="1" aria-label="Jumlah" />
+                            <button class="quantity-adjust-btn"
+                                aria-label="Tambah jumlah">+</button>
+                        </div>
+                        <div class="item-total-price">Rp60.000</div>
+                        <div class="item-action">
+                            <button class="remove-item-btn"
+                                aria-label="Hapus item"><i
+                                    class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+                    
+                </div>
+
+                <div class="cart-summary-footer">
+                    <div class="footer-select-all">
+                        <input type="checkbox" id="selectAllBottom" checked />
+                        <label for="selectAllBottom">Select All (2
+                            items)</label>
+                    </div>
+                    <button class="remove-selected-btn">Delete Selected</button>
+                    <div class="spacer"></div> <div class="cart-total-summary">
+                        Total (<span class="total-items-count">2</span>
+                        Products): <span
+                            class="grand-total-price">Rp80.000</span>
+                    </div>
+                    <a href="tampilanCheckout.html" class="checkout-btn-cart order-btn">Checkout</a>
+                </div>
+            </div>
+        </main>
+
+    </body>
+</html>
